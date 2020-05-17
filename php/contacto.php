@@ -24,16 +24,16 @@ if (!$correo) {
 
 $asunto = "Nuevo mensaje de sitio web";
 
-$datos = "De: $nombre\nCorreo: $correo\nMensaje: $mensaje";
-$mensaje = "Has recibido un mensaje desde el formulario de contacto de tu sitio web. Aquí están los detalles:\n$datos";
-$destinatario = "barbarasteimberg@estudioraisman.com.ar"; # aquí la persona que recibirá los mensajes
-$encabezados = "Sender: contacto@kotori-yumi.github.io\r\n"; # El remitente, debe ser un correo de tu dominio de servidor
-$encabezados .= "From: $nombre <" . $correo . ">\r\n";
-$encabezados .= "Reply-To: $nombre <$correo>\r\n";
-$resultado = mail($destinatario, $asunto, $mensaje, $encabezados);
-if ($resultado) {
-    echo "<h1>Mensaje enviado, ¡Gracias por contactarme!</h1>";
-    echo "<p>Tu mensaje se ha enviado correctamente.</p><h2>Importante</h2><p>Revisa tu bandeja de SPAM, en ocasiones mis respuestas quedan ahí. </p>";
-} else {
-    echo "Tu mensaje no se ha enviado. Intenta de nuevo.";
-}
+//$datos = "De: $nombre\nCorreo: $correo\nMensaje: $mensaje";
+//$mensaje = "Has recibido un mensaje desde el formulario de contacto de tu sitio web. Aquí están los detalles:\n$datos";
+//$destinatario = "barbarasteimberg@estudioraisman.com.ar"; # aquí la persona que recibirá los mensajes
+//$encabezados = "Sender: contacto@kotori-yumi.github.io\r\n"; # El remitente, debe ser un correo de tu dominio de servidor
+//$encabezados .= "From: $nombre <" . $correo . ">\r\n";
+//$encabezados .= "Reply-To: $nombre <$correo>\r\n";
+//$resultado = mail($destinatario, $asunto, $mensaje, $encabezados);
+//if ($resultado) {
+//    echo "<h1>Mensaje enviado, ¡Gracias por contactarme!</h1>";
+//    echo "<p>Tu mensaje se ha enviado correctamente.</p><h2>Importante</h2><p>Revisa tu bandeja de SPAM, en ocasiones mis respuestas quedan ahí. </p>";
+//} else {
+ //   echo "Tu mensaje no se ha enviado. Intenta de nuevo.";
+//}
