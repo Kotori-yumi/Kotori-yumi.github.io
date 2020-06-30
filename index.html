@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css//style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_GtdzRYBQ7aAiGuWDLDqTZ");
+        })();
+    </script>
 </head>
 
 <body>
@@ -439,22 +445,22 @@
         <h2 class="display-4 text-center my-4" id="contacto">Contacto</h2>
         <article>
             <div class="col-12">
-                <form>
+                <form onsubmit="validarForm(event)">
                     <div class="form-group">
                         <label for="nombre">Nombre y Apellido</label>
                         <input name="nombre" required type="text" id="nombre"
-                            class="form-control" placeholder="Nombre y Apellido">
+                            class="form-control" placeholder="Nombre y Apellido" onblur="revisar(this)" required>
                     </div>
                     <div class="form-group">
                         <label for="correo">Correo electrónico</label>
-                        <input name="correo" required type="email" id="correo"
-                            class="form-control" placeholder="tumail@gmail.com">
+                        <input name="correo" required type="email" id="email"
+                            class="form-control" placeholder="tumail@gmail.com" onblur="validarEmail(this)" required>
                     </div>
                     <div class="form-group">
                         <label for="mensaje">Mensaje</label>
                         <textarea required placeholder="Escribe tu mensaje"
-                            class="form-control" name="mensaje" id="mensaje"
-                            cols="30" rows="5"></textarea>
+                            class="form-control" name="mensaje" id="consulta"
+                            cols="30" rows="5" onblur="validarConsulta(this)" required></textarea>
                     </div>
                     <div class="form-group disabled">
                         <button class="btn-primary btn" type="submit">
@@ -462,6 +468,8 @@
                         </button>
                     </div>
                 </form>
+                <div class="alert alert-info m-4 d-none" role="alert" id="alerta">
+
             </div>
         </article>
     </section>
@@ -488,6 +496,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <script src="js/cv.js"></script>
 </body>
 
 </html>
